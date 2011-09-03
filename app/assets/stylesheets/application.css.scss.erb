@@ -9,13 +9,14 @@
 */
 
 @import url(http://fonts.googleapis.com/css?family=Antic);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300);
 
 $header_height: 76px;
 
 body{
 	background: white url(<%= asset_path 'body_bg.png' %>) repeat-x top left;
-	font-size: 11px;
+	font-size: 13px;
+	color: #6c7a84;
 }
 
 #header {
@@ -92,16 +93,28 @@ body{
   margin-bottom: 20px;
 }
 
-h1 {
-  background-color: #ebf3f3;
+h1, h2 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   color: #383f43;
-  padding: 10px 15px 10px 15px;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 20px;
   font-weight: normal;
   margin: 0px;
+  font-size: 22px;
+}
+
+h1 {
+  background-color: #ebf3f3;
+  padding: 10px 15px 10px 15px;
+}
+
+h2 {
+  
 }
 
 .box {
   background-color: #ebf3f3;
+  padding: 10px 15px 10px 15px;
+}
+
+.box ul li {
+  margin-bottom: 6px;
 }
