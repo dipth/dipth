@@ -8,7 +8,31 @@
 </head>
 <body>
 
-<%= yield %>
+  <div class="container_12">
+    <div id="header" class="grid_12">
+      <%= link_to image_tag("logo.png", :alt => "@dipth"), root_path %>
+      <div id="search_container">
+        <%= form_tag "/search" do %>
+          <%= text_field_tag "q", params[:q] %>
+        <% end %>
+      </div>
+      <ul id="main_menu">
+        <li class="selected"><%= link_to "Home", "/" %></li>
+        <li><%= link_to "Blog", "/" %></li>
+        <li><%= link_to "About", "/" %></li>
+        <li><%= link_to "Projects", "/" %></li>
+        <li><%= link_to "Contact", "/" %></li>
+      </ul>
+    </div>
+    <div class="grid_12" id="main_content_container">
+      <%= yield :above_content %>
+      <div class="grid_8 alpha"><%= yield %></div>
+      <div class="grid_4 omega"><%= yield :right_column %></div>
+      <%= yield :below_content %>
+    </div>
+  </div>
+
+
 
 </body>
 </html>
