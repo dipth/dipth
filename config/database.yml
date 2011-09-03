@@ -17,7 +17,8 @@ development:
   encoding: unicode
   database: dipth_development
   pool: 5
-  username: dipth
+  host: localhost
+  username: thomas
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,7 +44,8 @@ test:
   encoding: unicode
   database: dipth_test
   pool: 5
-  username: dipth
+  host: localhost
+  username: thomas
   password:
 
 production:
