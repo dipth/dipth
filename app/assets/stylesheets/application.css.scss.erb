@@ -13,6 +13,8 @@
 
 $header_height: 76px;
 
+html, body {height: 100%;}
+
 body{
 	background: white url(<%= asset_path 'body_bg.png' %>) repeat-x top left;
 	font-size: 13px;
@@ -178,4 +180,25 @@ h2 {
 
 .strong {
   font-weight: bold;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom: 60px;
+}
+
+#footer {
+  position: relative;
+	margin-top: -60px; /* negative value of footer height */
+	height: 60px;
+	clear:both;
+	background-color: #0d0e0e;
+	color: #d2d2d2;
+	line-height: 60px;
+	font-size: 11px;
+	font-family: 'Antic', sans-serif;
 }
