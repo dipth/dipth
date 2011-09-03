@@ -104,6 +104,7 @@ h1, h2 {
 h1 {
   background-color: #ebf3f3;
   padding: 10px 15px 10px 15px;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -117,4 +118,64 @@ h2 {
 
 .box ul li {
   margin-bottom: 6px;
+}
+
+.blog_entry {
+  background: white url(<%= asset_path 'blog_entry_bg.png' %>) repeat-y top left;
+  margin-bottom: 20px;
+}
+
+.blog_entry .inner {
+  background: url(<%= asset_path 'blog_entry_gradient.png' %>) no-repeat bottom left;
+  position: relative;
+}
+
+.blog_entry .inner .top {
+  background: url(<%= asset_path 'blog_entry_top.png' %>) no-repeat top left;
+  height: 10px;
+}
+
+.blog_entry .inner .bottom {
+  background: url(<%= asset_path 'blog_entry_bottom.png' %>) no-repeat top left;
+  height: 11px;
+}
+
+.blog_entry .inner .date {
+  background: url(<%= asset_path 'blog_entry_date_bg.png' %>) no-repeat center right;
+  height: 64px;
+  width: 70px;
+  top: 10px;
+  left: 0px;
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 15px;
+}
+
+.blog_entry .inner .date .day {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.blog_entry .inner .date .month {
+  font-size: 20px;
+}
+
+.blog_entry .inner .date .year {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.blog_entry .inner .middle {
+  padding: 0px 20px 0px 90px;
+}
+
+.blog_entry h2 {
+  border-bottom: 2px solid #ebf3f3;
+  padding-bottom: 10px;
+}
+
+.strong {
+  font-weight: bold;
 }
