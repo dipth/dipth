@@ -5,40 +5,9 @@
 <% end %>
 
 <% content_for :right_column do %>
-  <div class="box">
-    <h2>Archives</h2>
-    <ul>
-      <li>January 2011</li>
-      <li>February 2011</li>
-      <li>March 2011</li>
-      <li>April 2011</li>
-      <li>May 2011</li>
-      <li>June 2011</li>
-    </ul>
-  </div>
+  <%= render "blog_entries/archives" %>
 <% end %>
 
 <h1>Latest news</h1>
 
-<% @blog_entries.each do |blog_entry| %>
-  <div class="blog_entry">
-    <div class="inner">
-      <div class="top"></div>
-      <div class="date">
-        <span class="day"><%= blog_entry.published_at.day %></span><br />
-        <span class="month"><%= blog_entry.published_at.strftime("%b") %></span><br />
-        <span class="year"><%= blog_entry.published_at.year %></span><br />
-      </div>
-      <div class="middle">
-        <h2><%= blog_entry.title %></h2>
-        <p class="strong">
-          <%= blog_entry.excerpt %>
-        </p>
-        <p>
-          <%= blog_entry.body %>
-        </p>
-      </div>
-      <div class="bottom"></div>
-    </div>
-  </div>
-<% end %>
+<%= render @blog_entries %>
