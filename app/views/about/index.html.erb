@@ -1,0 +1,77 @@
+<%= content_for :above_content do %>
+  <div class="align_center">
+    <%= image_tag "about_banner.jpg", :id => "frontpage_banner" %>
+  </div>
+<% end %>
+
+<% content_for :right_column do %>
+  <%= render "competences" %>
+  <%= render "work_history" %>
+<% end %>
+
+<h1>About Thomas Dippel</h1>
+
+<p>
+  I'm a young professional web developer, rich on initiative, with years of experience.
+</p>
+
+<p>
+  Web development has always been a big part of my life as far back as I can remember.
+  And when I stumbled upon Ruby on Rails back in 2006 I knew that I had found something brilliant,
+  and Rails has been my go to framework for developing websites and applications ever since.
+</p>
+
+<p>
+  My professional career in software started as a .NET developer back in 2007 at a small Danish
+  company called Smartlaunch Systems. We developed management solutions for Internet Cafés around
+  the world, with focus on delivering the best and most user-friendly solutions on the market.
+</p>
+
+<p>
+  As a result of my entrepreneurial personality I quickly rose to the title of CTO in 2009 and
+  later as Managing Director of the Company.
+</p>
+
+<p>
+  However, the changing situation in the market ultimately resulted in the company having to cut back,
+  and I saw it as a chance to get back to my roots.
+</p>
+
+<p>
+  In 2011 I started working as a full time web developer for a Danish magazine publisher, Benjamin Media.<br />
+  Benjamin Media publishes the Danish magazines: M!, Bilmagasinet, Woman, Boligmagasinet, Costume, Vmax and others.<br />
+  In my job I have had great focus on developing community-driven websites with strong usability and performance.
+  Amongst other things, I have had the pleasure of optimizing their platform to handle twice the load that it was currently handling.
+</p>
+
+<p>
+  I believe in open standards and open source, and try to give as much back to the community as possible.
+</p>
+
+<p>
+  Apart from my work with web development I am also an avid photographer and cinematographer.
+</p>
+
+<h1>Education and Work History</h1>
+
+<ul>
+  <li>2001-2004: Vejen Handelsskole - HHX</li>
+  <li>2004-2006: University of Southern Denmark - Computer Science</li>
+  <li>2005-2007: Boomtown A/S - System Administrator</li>
+  <li>2007-2011: Smartlaunch Systems A/S - .NET Developer</li>
+  <li>2008-2011: Smartlaunch Systems A/S - CTO</li>
+  <li>2009-2011: Smartlaunch Systems A/S - CEO</li>
+  <li>2010-Present: Visioneers - Self-employed Web Developer</li>
+  <li>2011-Present: Benjamin Media A/S - Web Developer</li>
+</ul>
+
+<h1>Places where you can find me</h1>
+<ul class="link_image_list">
+  <li><%= link_to "#{image_tag "github.png"} Github".html_safe, "https://github.com/dipth", :target => "_blank" %></li>
+  <li><%= link_to "#{image_tag "coderwall.png"} Coderwall".html_safe, "http://coderwall.com/dipth", :target => "_blank" %></li>
+  <li><%= link_to "#{image_tag "stackoverflow.png"} Stack Overflow".html_safe, "http://stackoverflow.com/users/770996/thomas-dippel", :target => "_blank" %></li>
+  <li class="omega"><%= link_to "#{image_tag "twitter.png"} Twitter".html_safe, "https://twitter.com/#!/dipth", :target => "_blank" %></li>
+  <li><%= link_to "#{image_tag "linkedin.png"} LinkedIn".html_safe, "http://www.linkedin.com/in/dipth", :target => "_blank" %></li>
+  <li><%= link_to "#{image_tag "flickr.png"} Flickr".html_safe, "http://www.flickr.com/photos/wuziwug/", :target => "_blank" %></li>
+  <li><%= link_to "#{image_tag "vimeo.png"} Vimeo".html_safe, "http://vimeo.com/dippel", :target => "_blank" %></li>
+</ul>
