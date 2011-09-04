@@ -6,6 +6,7 @@
       <span class="month"><%= blog_entry.published_at.strftime("%b") %></span><br />
       <span class="year"><%= blog_entry.published_at.year %></span><br />
     </div>
+    <div class="comments_count"><%= link_to "0", blog_entry_url(blog_entry, :anchor => "disqus_thread"), 'data-disqus-identifier' => "blog_entry_#{blog_entry.id}" %></div>
     <div class="middle">
       <h2><%= blog_entry.title %></h2>
       <p class="strong">

@@ -204,6 +204,31 @@ h2 {
   font-size: 16px;
 }
 
+.blog_entry .inner .comments_count {
+  position: absolute;
+  width: 36px;
+  height: 29px;
+  bottom: 16px;
+  left: 18px;
+  background: url(<%= asset_path 'blog_entry_comments_count_bg.png' %>) no-repeat top left;
+  line-height: 20px;
+  text-align: center;
+  color: white;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.blog_entry .inner .comments_count a, .blog_entry .inner .comments_count a:visited {
+  color: white;
+}
+
+.blog_entry .inner .comments_count a:hover, .blog_entry .inner .comments_count a:active {
+  color: #ebf3f3;
+  text-decoration: none;
+}
+
 .blog_entry .inner .middle {
   padding: 0px 20px 0px 90px;
 }
