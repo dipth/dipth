@@ -1,6 +1,8 @@
 require 'spec_helper'
+require 'sunspot/rails/spec_helper'
 
 describe BlogEntry do
+  disconnect_sunspot
   
   describe "Validation" do
     
