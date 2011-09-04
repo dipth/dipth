@@ -55,7 +55,9 @@ body{
   color: #b8d3df;
 }
 
-#main_menu li.selected {
+body.frontpage #main_menu li.frontpage, body.blog_entries #main_menu li.blog_entries,
+body.about #main_menu li.about, body.projects #main_menu li.projects,
+body.contact #main_menu li.contact {
   background: url(<%= asset_path 'main_menu_selected_bg.png' %>) no-repeat top left;
 }
 

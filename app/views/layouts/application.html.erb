@@ -18,11 +18,11 @@
           <% end %>
         </div>
         <ul id="main_menu">
-          <li class="selected"><%= link_to "Home", "/" %></li>
-          <li><%= link_to "Blog", "/" %></li>
-          <li><%= link_to "About", "/" %></li>
-          <li><%= link_to "Projects", "/" %></li>
-          <li><%= link_to "Contact", "/" %></li>
+          <li class="frontpage"><%= link_to "Home", root_path %></li>
+          <li class="blog_entries"><%= link_to "Blog", blog_entries_path %></li>
+          <li class="about"><%= link_to "About", "/" %></li>
+          <li class="projects"><%= link_to "Projects", "/" %></li>
+          <li class="contact"><%= link_to "Contact", "/" %></li>
         </ul>
       </div>
       <div class="grid_12" id="main_content_container">
