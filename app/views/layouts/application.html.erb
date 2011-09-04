@@ -13,8 +13,8 @@
       <div id="header" class="grid_12">
         <%= link_to image_tag("logo.png", :alt => "@dipth"), root_path %>
         <div id="search_container">
-          <%= form_tag "/search" do %>
-            <%= text_field_tag "q", params[:q] %>
+          <%= form_tag blog_entries_path, :method => :get do %>
+            <%= text_field_tag "search", params[:search] %>
           <% end %>
         </div>
         <ul id="main_menu">
