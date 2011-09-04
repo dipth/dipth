@@ -1,0 +1,20 @@
+<div class="blog_entry">
+  <div class="inner">
+    <div class="top"></div>
+    <div class="date">
+      <span class="day"><%= blog_entry.published_at.day %></span><br />
+      <span class="month"><%= blog_entry.published_at.strftime("%b") %></span><br />
+      <span class="year"><%= blog_entry.published_at.year %></span><br />
+    </div>
+    <div class="middle">
+      <h2><%= blog_entry.title %></h2>
+      <p class="strong">
+        <%= blog_entry.excerpt %>
+      </p>
+      <p>
+        <%= blog_entry.body %>
+      </p>
+    </div>
+    <div class="bottom"></div>
+  </div>
+</div>

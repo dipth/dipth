@@ -1,0 +1,8 @@
+<% content_for :right_column do %>
+  <%= render "me" %>
+  <%= render "archives" %>
+<% end %>
+
+<h1>Latest News</h1>
+
+<%= render @blog_entries %>
