@@ -47,6 +47,7 @@ test:
   host: localhost
   username: thomas
   password:
+  min_messages: warning
 
 production:
   adapter: postgresql
