@@ -1,11 +1,14 @@
 <div class="box">
-  <h2>Archives</h2>
+  <h2>Filter by Month</h2>
   <ul>
-    <li>January 2011</li>
-    <li>February 2011</li>
-    <li>March 2011</li>
-    <li>April 2011</li>
-    <li>May 2011</li>
-    <li>June 2011</li>
+    <% for row in @search.facet(:published_month).rows %>
+      <li>
+        <% if params[:month].blank? %>
+          <%= link_to row.value, :month => row.value, :search => params[:search] %> (<%= row.count %>)
+        <% else %>
+          <strong><%= row.value %></strong> (<%= link_to "remove", :month => nil, :search => params[:search] %>)
+        <% end %>
+      </li>
+    <% end %>
   </ul>
 </div>
