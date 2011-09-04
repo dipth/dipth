@@ -17,7 +17,7 @@
           <li><%= project_category.title %></li>
           <ul>
             <% project_category.projects.each do |project| %>
-              <li><%= link_to project.title, "#project_#{project.id}" %></li>
+              <li><%= link_to project.title, "#project_#{project.id}", :class => "smooth_scroll" %></li>
             <% end %>
           </ul>
         <% end %>
@@ -30,9 +30,9 @@
   <% if project_category.projects.any? %>
     <h1><%= project_category.title %></h1>
     <% project_category.projects.each do |project| %>
-      <div class="project">
+      <div class="project" id="project_<%= project.id %>">
         <div class="<%= project.tech_stack.present? ? "grid_6" : "grid_9" %> alpha">
-          <h2><%= project.title %></h2>
+          <h2><a name="project_<%= project.id %>"></a><%= project.title %></h2>
           <%= RedCloth.new(project.description).to_html.html_safe %>
           <p>
             <% if project.site_url %>

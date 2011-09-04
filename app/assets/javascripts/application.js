@@ -6,5 +6,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui-1.8.16.custom.min
 //= require jqFancyTransitions.1.8
+//= require jquery.scrollTo
 //= require_tree .
+
+jQuery(document).ready(function($) {
+  $('.smooth_scroll').click(function(event){
+    event.preventDefault();
+    $.scrollTo($(this).attr("href"), {duration: 500, easing:'swing'});
+  });
+});
