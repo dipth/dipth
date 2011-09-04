@@ -16,9 +16,13 @@ $header_height: 76px;
 html, body {height: 100%;}
 
 body{
-	background: white url(<%= asset_path 'body_bg.png' %>) repeat-x top left;
+	background: white url(<%= asset_path 'body_subpage_bg.png' %>) repeat-x top left;
 	font-size: 13px;
 	color: #6c7a84;
+}
+
+body.frontpage {
+  background-image: url(<%= asset_path 'body_bg.png' %>);
 }
 
 #header {
