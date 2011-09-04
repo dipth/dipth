@@ -1,9 +1,9 @@
 <% content_for :above_content do %>
   <div class="project_monitor">
     <div class="content" id="slideshowHolder">
-      <%= image_tag "project_pludr_01.jpg", :alt => "Pludr.dk" %>
-      <%= image_tag "project_stylegallery_01.jpg", :alt => "Stylegallery.dk" %>
-      <%= image_tag "project_mmm_01.jpg", :alt => "Mmm.dk" %>
+      <% @project_screenshots.each do |project_screenshot| %>
+        <%= image_tag project_screenshot.image.url, :alt => project_screenshot.project.title %>
+      <% end %>
     </div>
   </div>
 <% end %>
