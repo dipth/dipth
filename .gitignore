@@ -5,3 +5,4 @@ log/*.log.lck
 tmp/
 .sass-cache/
 solr/data
+.DS_Store
