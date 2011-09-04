@@ -12,4 +12,8 @@ class BlogEntriesController < ApplicationController
     @blog_entries = @search.results
   end
   
+  def show
+    @blog_entry = BlogEntry.published.find(params[:id])
+  end
+  
 end

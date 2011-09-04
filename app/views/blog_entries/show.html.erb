@@ -1,0 +1,35 @@
+<% content_for :right_column do %>
+  <h1><%=l @blog_entry.published_at.to_date, :format => :long %></h1>
+  <p class="align_center">
+    <%= link_to "Go back to list", blog_entries_path, :class => "button" %>
+  </p>
+<% end %>
+
+<h1><%= @blog_entry.title %></h1>
+<strong>
+  <%= RedCloth.new(@blog_entry.excerpt).to_html.html_safe %>
+</strong>
+<%= RedCloth.new(@blog_entry.body).to_html.html_safe %>
+
+
+<h1>Comments</h1>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'dipth'; // required: replace example with your forum shortname
+    var disqus_identifier = 'blog_entry_<%= @blog_entry.id%>';
+    var disqus_url = '<%= blog_entry_url(@blog_entry) %>';
+    <% if Rails.env.development? || Rails.env.test? %>
+    var disqus_developer = true;
+    <% end %>
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>

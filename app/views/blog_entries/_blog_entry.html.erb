@@ -9,10 +9,10 @@
     <div class="middle">
       <h2><%= blog_entry.title %></h2>
       <p class="strong">
-        <%= blog_entry.excerpt %>
+        <%= RedCloth.new(blog_entry.excerpt).to_html.html_safe %>
       </p>
       <p>
-        <%= blog_entry.body %>
+        <%= link_to "Read more", blog_entry, :class => "button" %>
       </p>
     </div>
     <div class="bottom"></div>
