@@ -13,7 +13,7 @@ class BlogEntry < ActiveRecord::Base
   end
   
   def published_month
-    published_at.strftime("%B %Y")
+    published_at.present? ? published_at.strftime("%B %Y") : nil
   end
   
 end
