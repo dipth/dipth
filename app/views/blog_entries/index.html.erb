@@ -3,6 +3,10 @@
   <%= render "archives" %>
 <% end %>
 
-<h1>Latest News</h1>
+<% if params[:search].present? %>
+  <h1>Search: <%= params[:search] %></h1>
+<% else %>
+  <h1>Latest News</h1>
+<% end %>
 
 <%= render @blog_entries %>
