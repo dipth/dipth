@@ -7,6 +7,7 @@ class BlogEntriesController < ApplicationController
       facet(:published_month)
       with(:published_month, params[:month]) if params[:month].present?
       order_by(:published_at, :desc) unless params[:search].present?
+      paginate(:page => params[:page], :per_page => 10)
     end
     @blog_entries = @search.results
   end
