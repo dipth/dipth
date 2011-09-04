@@ -1,0 +1,60 @@
+<% content_for :above_content do %>
+  <div class="project_monitor">
+    <div class="content" id="slideshowHolder">
+      <%= image_tag "project_pludr_01.jpg", :alt => "Pludr.dk" %>
+      <%= image_tag "project_stylegallery_01.jpg", :alt => "Stylegallery.dk" %>
+      <%= image_tag "project_mmm_01.jpg", :alt => "Mmm.dk" %>
+    </div>
+  </div>
+<% end %>
+
+<% content_for :right_column do %>
+  <div class="box">
+    <h2>Overview</h2>
+    <ul>
+      <% @project_categories.each do |project_category| %>
+        <% if project_category.projects.any? %>
+          <li><%= project_category.title %></li>
+          <ul>
+            <% project_category.projects.each do |project| %>
+              <li><%= link_to project.title, "#project_#{project.id}" %></li>
+            <% end %>
+          </ul>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<% @project_categories.each do |project_category| %>
+  <% if project_category.projects.any? %>
+    <h1><%= project_category.title %></h1>
+    <% project_category.projects.each do |project| %>
+      <div class="project">
+        <div class="<%= project.tech_stack.present? ? "grid_6" : "grid_9" %> alpha">
+          <h2><%= project.title %></h2>
+          <%= RedCloth.new(project.description).to_html.html_safe %>
+          <p>
+            <% if project.site_url %>
+              <%= link_to "Visit Site", project.site_url, :target => "_blank", :class => "button" %>
+            <% end %>
+            <% if project.github_url %>
+              <%= link_to "Fork me on Github", project.github_url, :target => "_blank", :class => "button" %>
+            <% end %>
+          </p>
+        </div>
+        <% if project.tech_stack.present? %>
+          <div class="grid_3 omega">
+            <h3>Technology Stack</h3>
+            <%= RedCloth.new(project.tech_stack).to_html.html_safe %>
+          </div>
+        <% end %>
+      </div>
+      <br style="clear:both" /><br style="clear:both" />
+    <% end %>
+  <% end %>
+<% end %>
+
+<script>
+  $('#slideshowHolder').jqFancyTransitions({ width: 861, height: 501 });
+</script>

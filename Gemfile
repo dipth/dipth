@@ -10,6 +10,8 @@ gem 'devise'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'sunspot_rails'
 gem 'will_paginate', '~> 3.0'
+gem 'RedCloth'
+gem 'paperclip'
 
 
 # Gems used only for assets and not required

@@ -6,4 +6,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jqFancyTransitions.1.8
 //= require_tree .

@@ -4,6 +4,7 @@ Dipth::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   
   resources :blog_entries
+  resources :projects
   
   match 'about' => 'about#index', :as => :about
 

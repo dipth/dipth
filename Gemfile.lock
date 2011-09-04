@@ -10,6 +10,7 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
+    RedCloth (4.2.8)
     actionmailer (3.1.0)
       actionpack (= 3.1.0)
       mail (~> 2.3.0)
@@ -43,6 +44,7 @@ GEM
     arel (2.2.1)
     bcrypt-ruby (3.0.0)
     builder (3.0.0)
+    cocaine (0.2.0)
     coffee-rails (3.1.0)
       coffee-script (>= 2.2.0)
       railties (~> 3.1.0.rc1)
@@ -77,6 +79,11 @@ GEM
     multi_json (1.0.3)
     nokogiri (1.5.0)
     orm_adapter (0.0.5)
+    paperclip (2.4.0)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
+      cocaine (>= 0.0.2)
+      mime-types
     pg (0.11.0)
     polyglot (0.3.2)
     pr_geohash (1.0.0)
@@ -157,10 +164,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  RedCloth
   coffee-rails (~> 3.1.0)
   devise
   factory_girl_rails
   jquery-rails
+  paperclip
   pg
   rails (= 3.1.0)
   rails_admin!

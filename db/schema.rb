@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110903230856) do
+ActiveRecord::Schema.define(:version => 20110904155523) do
 
   create_table "blog_entries", :force => true do |t|
     t.string   "title"
@@ -21,6 +21,25 @@ ActiveRecord::Schema.define(:version => 20110903230856) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "project_categories", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.text     "tech_stack"
+    t.string   "site_url"
+    t.string   "github_url"
+    t.integer  "project_category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "projects", ["project_category_id"], :name => "index_projects_on_project_category_id"
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"

@@ -4,6 +4,7 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require normalize
  *= require 960
+ *= require css3buttons
  *= require_self
  *= require_tree .
 */
@@ -21,7 +22,7 @@ body{
 	color: #6c7a84;
 }
 
-body.frontpage {
+body.frontpage, body.about, body.projects {
   background-image: url(<%= asset_path 'body_bg.png' %>);
 }
 
@@ -104,6 +105,14 @@ body.contact #main_menu li.contact {
   padding-top: 20px;
 }
 
+#main_content p {
+  padding: 0px 20px 0px 20px;
+}
+
+#main_content h2, #main_content h3 {
+  padding: 0px 15px 0px 15px;
+}
+
 .align_center {
   text-align: center;
 }
@@ -112,7 +121,7 @@ body.contact #main_menu li.contact {
   margin-bottom: 20px;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   color: #383f43;
   font-weight: normal;
