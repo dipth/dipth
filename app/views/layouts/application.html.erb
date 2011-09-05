@@ -2,6 +2,7 @@
 <html>
 <head>
   <title><%= content_for?(:title) ? "#{yield :title} | Dipth.com" : "Dipth.com"%></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "My name is Thomas Dippel, and I'm a passionate Ruby on Rails developer with an eye for details and a sense of technique."%>" />
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>

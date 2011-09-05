@@ -1,4 +1,5 @@
 <% content_for(:title){@blog_entry.title} %>
+<% content_for(:description){@blog_entry.excerpt} %>
 
 <% content_for :right_column do %>
   <h1><%=l @blog_entry.published_at.to_date, :format => :long %></h1>
