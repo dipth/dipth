@@ -16,4 +16,8 @@ class BlogEntry < ActiveRecord::Base
     published_at.present? ? published_at.strftime("%B %Y") : nil
   end
   
+  def to_param
+    "#{id}-#{title.gsub(/[^a-z0-9]+/i, '-')}"
+  end
+  
 end
