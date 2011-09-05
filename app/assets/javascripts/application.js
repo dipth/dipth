@@ -11,8 +11,6 @@
 //= require jquery.scrollTo
 //= require xregexp
 //= require shCore
-//= require shLegacy
-//= require shAutoloader
 //= require shBrushRuby
 //= require shBrushJScript
 //= require shBrushSql
