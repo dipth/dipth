@@ -7,6 +7,7 @@ Dipth::Application.routes.draw do
   resources :projects
   
   match 'about' => 'about#index', :as => :about
+  match 'contact' => 'contact#index', :as => :contact
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
