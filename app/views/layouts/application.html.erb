@@ -27,8 +27,10 @@
       </div>
       <div class="grid_12" id="main_content_container">
         <%= yield :above_content %>
-        <div class="grid_9 alpha" id="main_content"><%= yield %></div>
-        <div class="grid_3 omega right_column" id="right_column"><%= yield :right_column %></div>
+        <div class="<%= content_for?(:right_column) ? "grid_9 alpha" : "grid_12 alpha omega" %>" id="main_content"><%= yield %></div>
+        <% if content_for?(:right_column) %>
+          <div class="grid_3 omega right_column" id="right_column"><%= yield :right_column %></div>
+        <% end %>
         <%= yield :below_content %>
       </div>
     </div>
