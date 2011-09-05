@@ -9,6 +9,17 @@
 //= require jquery-ui-1.8.16.custom.min
 //= require jqFancyTransitions.1.8
 //= require jquery.scrollTo
+//= require xregexp
+//= require shCore
+//= require shLegacy
+//= require shAutoloader
+//= require shBrushRuby
+//= require shBrushJScript
+//= require shBrushSql
+//= require shBrushSass
+//= require shBrushCss
+//= require shBrushXml
+//= require shBrushBash
 //= require_tree .
 
 jQuery(document).ready(function($) {

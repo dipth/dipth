@@ -1,7 +1,7 @@
 <% content_for :right_column do %>
   <h1><%=l @blog_entry.published_at.to_date, :format => :long %></h1>
   <p class="align_center">
-    <%= link_to "Go back to list", blog_entries_path, :class => "button" %>
+    <%= link_to "<span class=\"icon leftarrow\"></span>Go back to list".html_safe, blog_entries_path, :class => "button" %>
   </p>
 <% end %>
 
@@ -33,3 +33,8 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+    SyntaxHighlighter.all()
+  });
+</script>
